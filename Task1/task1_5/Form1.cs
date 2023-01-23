@@ -17,7 +17,10 @@ namespace task1_5
     public partial class Form1 : Form
     {
         OleDbConnection connection = new OleDbConnection();
-        string testConnect = @"Provider=MSOLEDBSQL; Server=(localdb)\MSSQLLocalDB;Trusted_Connection=Yes; AttachDbFileName=C:\Users\sergey\NORTHWND.MDF; Database=Northwnd";
+
+        //string testConnect = @"Provider=MSOLEDBSQL; Server=(localdb)\MSSQLLocalDB;Trusted_Connection=Yes; AttachDbFileName=C:\Users\sergey\NORTHWND.MDF; Database=Northwnd";
+
+
         
         public Form1()
         {
@@ -25,6 +28,18 @@ namespace task1_5
             this.connection.StateChange += new StateChangeEventHandler(this.connection_StateChange);
         }
 
+        static string GetConnectionStringByName(string name)
+        {
+            string returnValue = null;
+            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[name];
+            if(settings != null)
+            {
+                returnValue = settings.ConnectionString;
+            }
+            return returnValue;
+        }
+
+        string testConnect = GetConnectionStringByName("NorthwndDb");
         private void connection_StateChange(object sender, StateChangeEventArgs e)
         {
             connectToDBToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Closed);
