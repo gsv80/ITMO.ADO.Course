@@ -25,9 +25,16 @@ namespace task1_2
 
         private void connectToDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try 
+           
+
+            
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
             {
-                if(connection.State != ConnectionState.Open)
+                if (connection.State != ConnectionState.Open)
                 {
                     connection.ConnectionString = testConnect;
                     connection.Open();
@@ -38,15 +45,14 @@ namespace task1_2
                     MessageBox.Show("Connection already set");
                 }
             }
-            catch(OleDbException exSQL)
+            catch 
             {
-                foreach (OleDbError se in exSQL.Errors)
-                {
-                    MessageBox.Show(se.Message, "SQL error " + se.NativeError, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                //MessageBox.Show("Connetion error");
+                MessageBox.Show("Connetion error");
             }
+        }
 
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             if (connection.State == ConnectionState.Open)
             {
                 connection.Close();

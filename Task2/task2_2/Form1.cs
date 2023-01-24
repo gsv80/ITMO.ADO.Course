@@ -11,7 +11,7 @@ using System.Data.OleDb;
 using System.Runtime.CompilerServices;
 using System.Configuration;
 
-namespace task1_5
+namespace task2_2
 {
     
     public partial class Form1 : Form
@@ -72,7 +72,7 @@ namespace task1_5
                     connection.ConnectionString = testConnect;                       
 
                     connection.Open();
-                    MessageBox.Show("Connection has been set up successefully");
+                    MessageBox.Show("Connection has been set up successfully");
                 }
                 else
                 {
@@ -99,6 +99,42 @@ namespace task1_5
             {
                 MessageBox.Show("Connection alredy closed");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (connection.State == ConnectionState.Closed)
+            {
+                MessageBox.Show("Сначала подключитесь к базе");
+                return;
+            }
+
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "SELECT COUNT(*) FROM Products";
+            int number = (int)command.ExecuteScalar();
+            label1.Text = number.ToString();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (connection.State == ConnectionState.Closed)
+            {
+                MessageBox.Show("Сначала подключитесь к базе");
+                return;
+            }
+
+            OleDbCommand command = connection.CreateCommand();
+
+            command.CommandText = "select ProductName from Products";
+            OleDbDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                listView1.Items.Add(reader["ProductName"].ToString());
+            }
+
         }
     }
 }

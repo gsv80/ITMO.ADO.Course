@@ -23,10 +23,14 @@ namespace task1_3
         }
 
         private void connectToDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {           
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
-                if(connection.State != ConnectionState.Open)
+                if (connection.State != ConnectionState.Open)
                 {
                     connection.ConnectionString = testConnect;
                     connection.Open();
@@ -37,14 +41,22 @@ namespace task1_3
                     MessageBox.Show("Connection already set");
                 }
             }
-            catch(OleDbException ex)
+            catch (OleDbException ex)
             {
-                foreach( OleDbError se in ex.Errors)
+                foreach (OleDbError se in ex.Errors)
                 {
                     MessageBox.Show(se.Message, "SQL error: " + se.NativeError, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            
+
+            catch(Exception ex)
+            {               
+                    MessageBox.Show(ex.Message, "Unexpected Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);              
+            }
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             if (connection.State == ConnectionState.Open)
             {

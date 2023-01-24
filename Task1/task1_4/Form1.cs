@@ -17,10 +17,7 @@ namespace task1_4
     {
         OleDbConnection connection = new OleDbConnection();
         string testConnect = @"Provider=MSOLEDBSQL; Server=(localdb)\MSSQLLocalDB;Trusted_Connection=Yes; AttachDbFileName=C:\Users\sergey\NORTHWND.MDF; Database=Northwnd";
-
-        
-
-        
+       
         public Form1()
         {
             InitializeComponent();
@@ -29,15 +26,20 @@ namespace task1_4
 
         private void connection_StateChange(object sender, StateChangeEventArgs e)
         {
-            connectToDBToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Closed);
-            connectToDBToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Open);
+            
+            openToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Closed);
+            closeToolStripMenuItem.Enabled = e.CurrentState == ConnectionState.Open;
         }
 
         private void connectToDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {   
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
-                if(connection.State != ConnectionState.Open)
+                if (connection.State != ConnectionState.Open)
                 {
                     connection.ConnectionString = testConnect;
                     connection.Open();
@@ -48,15 +50,17 @@ namespace task1_4
                     MessageBox.Show("Connection already set");
                 }
             }
-            catch(OleDbException ex)
+            catch (OleDbException ex)
             {
-                foreach( OleDbError se in ex.Errors)
+                foreach (OleDbError se in ex.Errors)
                 {
                     MessageBox.Show(se.Message, "SQL error: " + se.NativeError, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            
+        }
 
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             if (connection.State == ConnectionState.Open)
             {
                 connection.Close();
