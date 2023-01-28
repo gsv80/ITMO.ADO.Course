@@ -153,6 +153,7 @@
             this.buttonFile.TabIndex = 11;
             this.buttonFile.Text = "Choose File";
             this.buttonFile.UseVisualStyleBackColor = true;
+            this.buttonFile.Click += new System.EventHandler(this.buttonFile_Click);
             // 
             // buttonAdd
             // 
@@ -162,6 +163,7 @@
             this.buttonAdd.TabIndex = 12;
             this.buttonAdd.Text = "Add Data";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonOut
             // 
