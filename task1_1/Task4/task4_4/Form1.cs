@@ -13,11 +13,11 @@ namespace task4_4
 {
     public partial class Form1 : Form
     {
-        private SqlConnection NorthwindConnection = new SqlConnection("Data Source=.SQLExpress;Initial Catalog=NORTHWND;Integrated Security=True");
-            //("Server=./SQLEXPRESS;Database=Northwnd;Trusted_Connection=True;");
+        private SqlConnection NorthwindConnection = new SqlConnection(@"Data Source=.\SQLExpress; Initial Catalog=NORTHWND;Integrated Security=True");
+            
         private SqlDataAdapter SqlDataAdapter1;
 
-        private DataSet NorthwindDataset = new DataSet("Northwind");
+        private DataSet NorthwindDataset = new DataSet("NORTHWND");
         private DataTable CustomersTable = new DataTable("Customers");
         public Form1()
         {
