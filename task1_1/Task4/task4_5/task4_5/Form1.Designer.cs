@@ -47,7 +47,9 @@ namespace task4_5
             this.OriginalDRVTextBox = new System.Windows.Forms.TextBox();
             this.RowStateTextBox = new System.Windows.Forms.TextBox();
             this.CurrentDRVTextBox = new System.Windows.Forms.TextBox();
+            this.northwindDataSet1 = new task4_5.NorthwindDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // CustomersDataGridView
@@ -257,6 +259,11 @@ namespace task4_5
             this.CurrentDRVTextBox.Size = new System.Drawing.Size(138, 20);
             this.CurrentDRVTextBox.TabIndex = 9;
             // 
+            // northwindDataSet1
+            // 
+            this.northwindDataSet1.DataSetName = "NorthwindDataSet";
+            this.northwindDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,6 +284,7 @@ namespace task4_5
             this.Text = "WorkingDataTable";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,6 +309,7 @@ namespace task4_5
         private System.Windows.Forms.TextBox OriginalDRVTextBox;
         private System.Windows.Forms.TextBox RowStateTextBox;
         private System.Windows.Forms.TextBox CurrentDRVTextBox;
+        private NorthwindDataSet northwindDataSet1;
     }
 }
 

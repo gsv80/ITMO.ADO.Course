@@ -117,7 +117,7 @@ namespace task4_5
 
         }
 
-        private void RejectChangesButton_Click(object sender, EventArgs e)
+    private void RejectChangesButton_Click(object sender, EventArgs e)
         {
             GetSelectedRow().RejectChanges();
             UpdateRowVersionDisplay();
