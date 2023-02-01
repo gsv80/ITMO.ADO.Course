@@ -43,6 +43,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DATA", "DATA", "{356FFAD0-2
 		C:\Users\sergey\NORTHWND_log.ldf = C:\Users\sergey\NORTHWND_log.ldf
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-Testify", "task-Testify", "{2C69EA5E-36A4-49B6-89B6-8F1EDB139DEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestifyTAsk", "..\TestifyTAsk\TestifyTAsk.csproj", "{021A08F8-9182-40F0-8215-9666A9FE4174}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,10 @@ Global
 		{B07F298E-DA38-43F9-BF11-3EAAA4910BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B07F298E-DA38-43F9-BF11-3EAAA4910BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B07F298E-DA38-43F9-BF11-3EAAA4910BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021A08F8-9182-40F0-8215-9666A9FE4174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021A08F8-9182-40F0-8215-9666A9FE4174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021A08F8-9182-40F0-8215-9666A9FE4174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021A08F8-9182-40F0-8215-9666A9FE4174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +126,7 @@ Global
 		{F4516876-162E-4203-B381-5093505BB6FA} = {33FD17EC-049D-4D1C-BCC2-1217B4C09D38}
 		{36481B39-1BA9-4B47-AC7E-64465D459C23} = {50111E6B-CBD9-4B8B-99AD-599B9B765367}
 		{B07F298E-DA38-43F9-BF11-3EAAA4910BF9} = {50111E6B-CBD9-4B8B-99AD-599B9B765367}
+		{021A08F8-9182-40F0-8215-9666A9FE4174} = {2C69EA5E-36A4-49B6-89B6-8F1EDB139DEB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B40ABE3-BCCF-4AC2-82C6-032CC7412DFD}
