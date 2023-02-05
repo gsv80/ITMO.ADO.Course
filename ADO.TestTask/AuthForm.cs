@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ADO.TestTask
 {
@@ -28,9 +29,9 @@ namespace ADO.TestTask
             string pas = textBoxPassword.Text;
 
             
-            adminForm aForm = new adminForm();
+            TableForm tableForm = new TableForm();
             
-            aForm.Show();
+            tableForm.Show();
             this.Hide();
         }
     }

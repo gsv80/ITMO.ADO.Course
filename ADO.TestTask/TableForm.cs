@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ADO.TestTask
 {
-    public partial class adminForm : Form
+    public partial class TableForm : Form
     {
-        public adminForm()
+        public TableForm()
         {
             InitializeComponent();
         }
