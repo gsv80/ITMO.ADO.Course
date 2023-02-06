@@ -29,9 +29,9 @@ namespace ADO.TestTask
             string pas = textBoxPassword.Text;
 
             
-            TableForm tableForm = new TableForm();
+            MainForm mainForm = new MainForm();
             
-            tableForm.Show();
+            mainForm.Show();
             this.Hide();
         }
     }
