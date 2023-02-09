@@ -63,9 +63,9 @@ namespace ADO.TestTask.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static byte[] ApressFinancial {
+        public static byte[] Northwind {
             get {
-                object obj = ResourceManager.GetObject("ApressFinancial", resourceCulture);
+                object obj = ResourceManager.GetObject("Northwind", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -73,19 +73,9 @@ namespace ADO.TestTask.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static byte[] ApressFinancial_act {
+        public static byte[] Northwind_log {
             get {
-                object obj = ResourceManager.GetObject("ApressFinancial_act", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        public static byte[] ApressFinancial_log {
-            get {
-                object obj = ResourceManager.GetObject("ApressFinancial_log", resourceCulture);
+                object obj = ResourceManager.GetObject("Northwind_log", resourceCulture);
                 return ((byte[])(obj));
             }
         }
